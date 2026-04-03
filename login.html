@@ -3,27 +3,31 @@
 <head>
   <title>Login</title>
 </head>
-<body>
+<body style="margin:0; font-family:Arial; background:#f4f4f4;">
 
-<h2>Login səhifəsi</h2>
+  <div style="width:300px; margin:120px auto; padding:30px; background:white; border-radius:10px; text-align:center;">
+    
+    <h2>Login</h2>
 
-<input type="text" id="username" placeholder="Username"><br><br>
-<input type="password" id="password" placeholder="Password"><br><br>
+    <input type="text" id="username" placeholder="Username" style="width:90%; padding:10px;"><br><br>
+    <input type="password" id="password" placeholder="Password" style="width:90%; padding:10px;"><br><br>
 
-<button onclick="login()">Daxil ol</button>
+    <button onclick="login()" style="padding:10px 20px;">Daxil ol</button>
 
-<p id="result"></p>
+    <p id="result"></p>
+
+  </div>
 
 <script>
 function login() {
-    let user = document.getElementById("username").value;
-    let pass = document.getElementById("password").value;
+  let u = document.getElementById("username").value;
+  let p = document.getElementById("password").value;
 
-    if(user === "admin" && pass === "1234") {
-        document.getElementById("result").innerText = "Giriş uğurludur";
-    } else {
-        document.getElementById("result").innerText = "Yanlış məlumat";
-    }
+  if(u === "admin" && p === "1234") {
+    document.getElementById("result").innerText = "Giriş uğurludur";
+  } else {
+    document.getElementById("result").innerText = "Yanlış məlumat";
+  }
 }
 </script>
 
